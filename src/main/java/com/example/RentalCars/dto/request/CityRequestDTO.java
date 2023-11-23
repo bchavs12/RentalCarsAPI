@@ -6,6 +6,6 @@ import lombok.Data;
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class CityRequestDTO {
-    private String city;
+    private String name;
     private String state;
 }

@@ -8,4 +8,5 @@ import lombok.Data;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class CategoryRequestDTO {
     private String name;
+    private String description;
 }

@@ -5,8 +5,7 @@ import com.example.RentalCars.dto.response.RentalCompanyResponseDTO;
 import com.example.RentalCars.exception.InvalidDataException;
 import com.example.RentalCars.exception.ResourceNotFoundException;
 import com.example.RentalCars.model.RentalCompany;
-import com.example.RentalCars.service.impl.RentalCompanyService;
-import org.apache.coyote.Response;
+import com.example.RentalCars.service.RentalCompanyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -35,11 +34,10 @@ public class RentalCompanyController {
 
 
     @PostMapping
-    public ResponseEntity<RentalCompanyResponseDTO> saveCompany(@RequestBody RentalCompanyRequestDTO requestDTO) throws InvalidDataException{
+    public ResponseEntity<RentalCompanyResponseDTO> createCompany(@RequestBody RentalCompanyRequestDTO requestDTO) throws InvalidDataException{
         try{
-            RentalCompanyResponseDTO responseDTO = rentalCompanyService.saveRentalCompany(requestDTO);
+            RentalCompanyResponseDTO responseDTO = rentalCompanyService.createRentalCompany(requestDTO);
             return ResponseEntity.status(HttpStatus.CREATED).body(responseDTO);
-
         }catch (Exception ex){
             throw new InvalidDataException("Informe todo os dados validos");
         }

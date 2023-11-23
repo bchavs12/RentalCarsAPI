@@ -20,6 +20,7 @@ public class Car {
     private String brand;
     private String model;
     private Integer carYear;
+    private String imageUrl;
     private Integer pricePerDay;
     private Boolean isAvailable;
 

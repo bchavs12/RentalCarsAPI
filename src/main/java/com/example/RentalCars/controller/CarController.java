@@ -5,7 +5,7 @@ import com.example.RentalCars.dto.response.CarResponseDTO;
 import com.example.RentalCars.exception.InvalidDataException;
 import com.example.RentalCars.exception.ResourceNotFoundException;
 import com.example.RentalCars.model.Car;
-import com.example.RentalCars.service.impl.CarService;
+import com.example.RentalCars.service.CarService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

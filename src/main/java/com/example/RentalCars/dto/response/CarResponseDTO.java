@@ -11,5 +11,4 @@ public class CarResponseDTO {
     private Integer pricePerDay;
     private Boolean isAvailable;
     private CategoryResponseDTO category;
-    private RentalCompanyResponseDTO rentalCompany;
 }

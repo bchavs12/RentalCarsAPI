@@ -5,7 +5,7 @@ import com.example.RentalCars.dto.response.CategoryResponseDTO;
 import com.example.RentalCars.exception.InvalidDataException;
 import com.example.RentalCars.exception.ResourceNotFoundException;
 import com.example.RentalCars.model.Category;
-import com.example.RentalCars.service.impl.CategoryService;
+import com.example.RentalCars.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -33,7 +33,7 @@ public class CategoryController {
 
 
     @PostMapping
-    public ResponseEntity<CategoryResponseDTO> saveCategory(@RequestBody CategoryRequestDTO requestDTO) throws InvalidDataException {
+    public ResponseEntity<CategoryResponseDTO> createCategory(@RequestBody CategoryRequestDTO requestDTO) throws InvalidDataException {
         try {
             CategoryResponseDTO responseDTO = categoryService.createCategory(requestDTO);
             return ResponseEntity.status(HttpStatus.CREATED).body(responseDTO);

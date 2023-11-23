@@ -5,7 +5,7 @@ import com.example.RentalCars.dto.response.CityResponseDTO;
 import com.example.RentalCars.exception.InvalidDataException;
 import com.example.RentalCars.exception.ResourceNotFoundException;
 import com.example.RentalCars.model.City;
-import com.example.RentalCars.service.impl.CityService;
+import com.example.RentalCars.service.CityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -31,9 +31,9 @@ public class CityController {
     }
 
     @PostMapping
-    public ResponseEntity<CityResponseDTO> saveCity(@RequestBody CityRequestDTO requestDTO) throws InvalidDataException{
+    public ResponseEntity<CityResponseDTO> createCity(@RequestBody CityRequestDTO requestDTO) throws InvalidDataException{
         try{
-            CityResponseDTO responseDTO = cityService.createCities(requestDTO);
+            CityResponseDTO responseDTO = cityService.createCity(requestDTO);
             return ResponseEntity.status(HttpStatus.CREATED).body(responseDTO);
         }catch (Exception ex){
             throw new InvalidDataException("Informe todos os dados validos");

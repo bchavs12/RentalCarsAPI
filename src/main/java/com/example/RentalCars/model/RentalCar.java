@@ -5,13 +5,13 @@ import jakarta.transaction.Transactional;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.sql.Time;
 import java.util.Date;
 
 @Data
 @Transactional
-@NoArgsConstructor
 
-@Table(name = "TB_RENTALS")
+@Table(name = "TB_BOOKINGS")
 @Entity
 public class RentalCar {
     @Id
@@ -26,8 +26,11 @@ public class RentalCar {
     @JoinColumn(name = "fk_user_id")
     private User user;
 
+    @Temporal(TemporalType.TIME)
+    private Time bookingStart;
+
     @Temporal(TemporalType.TIMESTAMP)
-    private Date rentalDate;
+    private Date bookingDate;
 
     @Temporal(TemporalType.TIMESTAMP)
     private Date returnDate;

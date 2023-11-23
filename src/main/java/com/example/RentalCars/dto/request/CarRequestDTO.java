@@ -11,8 +11,8 @@ public class CarRequestDTO {
     private String brand;
     private String model;
     private Integer carYear;
+    private String imageUrl;
     private Integer pricePerDay;
     private Boolean isAvailable;
-    private CategoryResponseDTO category;
-    private RentalCompanyResponseDTO rentalCompany;
+    private Long categoryId;
 }
