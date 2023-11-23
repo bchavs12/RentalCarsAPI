@@ -7,9 +7,6 @@ import lombok.NoArgsConstructor;
 import java.util.List;
 
 @Data
-@Transactional
-@NoArgsConstructor
-
 @Table(name = "TB_CATEGORIES")
 @Entity
 public class Category {
@@ -18,9 +15,7 @@ public class Category {
     private Long id;
 
     private String name;
-    private String qualification;
     private String description;
-    private String imageUrl;
 
     //Mappings
     @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)

@@ -8,9 +8,6 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
-@Data
-@Transactional
-@NoArgsConstructor
 
 @Table(name = "TB_CARS")
 @Entity
@@ -23,8 +20,7 @@ public class Car {
     private String brand;
     private String model;
     private Integer carYear;
-    private String description;
-    private Float price_per_day;
+    private Integer pricePerDay;
     private Boolean isAvailable;
 
     //Mappings
@@ -35,10 +31,8 @@ public class Car {
     @ManyToOne
     @JoinColumn(name = "fk_rental_company_id")
     private RentalCompany rentalCompany;
-
-    @OneToMany(mappedBy = "car", cascade = CascadeType.ALL)
-    private List<ImageUrl> imagesList;
-
+}
+/*
     @OneToMany(mappedBy = "car", cascade = CascadeType.ALL)
     private List<Characteristic> characteristic;
 
@@ -47,6 +41,7 @@ public class Car {
 
     @OneToMany(mappedBy = "car", cascade = CascadeType.ALL)
     private List<RentalCar> rentalCars;
-}
+
+ */
 
 

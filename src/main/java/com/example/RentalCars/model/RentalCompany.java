@@ -8,9 +8,6 @@ import lombok.NoArgsConstructor;
 import java.util.List;
 
 @Data
-@Transactional
-@NoArgsConstructor
-
 @Table(name = "TB_RENTAL_COMPANIES")
 @Entity
 public class RentalCompany {
@@ -19,12 +16,12 @@ public class RentalCompany {
     private Long id;
 
     private String name;
-    private String city;
-    private String country;
-    private String address;
-    private String phoneNumber;
 
-    @OneToMany(mappedBy = "rentalCompany", cascade = CascadeType.ALL)
+    @ManyToOne
+    @JoinColumn(name = "city")
+    private City city;
+
+    @OneToMany(mappedBy = "rentalCompany", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Car> availableCars;
 
 }

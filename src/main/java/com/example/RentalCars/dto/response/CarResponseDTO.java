@@ -8,9 +8,8 @@ public class CarResponseDTO {
     private String brand;
     private String model;
     private Integer carYear;
-    private String description;
-    private Double pricePerDay;
+    private Integer pricePerDay;
     private Boolean isAvailable;
-    private Long categoryId;
-    private Long rentalCompanyId;
+    private CategoryResponseDTO category;
+    private RentalCompanyResponseDTO rentalCompany;
 }
