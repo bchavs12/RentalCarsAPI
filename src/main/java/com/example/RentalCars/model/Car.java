@@ -11,6 +11,7 @@ import java.util.List;
 
 @Table(name = "TB_CARS")
 @Entity
+@Data
 public class Car {
 
     @Id

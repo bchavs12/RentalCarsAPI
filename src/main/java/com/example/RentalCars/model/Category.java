@@ -1,4 +1,5 @@
 package com.example.RentalCars.model;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.transaction.Transactional;
 
@@ -18,9 +19,10 @@ public class Category {
     private Long id;
     private String name;
     private String description;
+    private String imageUrl;
 
-    //Mappings
     @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<Car> cars;
 
 }

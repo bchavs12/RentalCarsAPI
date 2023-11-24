@@ -31,6 +31,15 @@ public class CarController {
         }
     }
 
+    @GetMapping("/category/{categoryId}")
+    public ResponseEntity<List<Car>> getCarsByCategory(@PathVariable Long categoryId) {
+        List<Car> cars = carService.getCarsByCategoryId(categoryId);
+        if (cars.isEmpty()) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(cars);
+    }
+
     @PostMapping
     public ResponseEntity<CarResponseDTO> saveCar(@RequestBody CarRequestDTO requestDTO) throws InvalidDataException {
         try{
