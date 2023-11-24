@@ -17,9 +17,8 @@ public class Characteristic {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    private String seats;  //assentos
-    private String trunk; //Porta-malas
+    private String seats;
+    private String trunk;
     private String icon;
     private Integer carDoors;
 

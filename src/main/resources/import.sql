@@ -9,9 +9,9 @@ INSERT INTO TB_CITIES (name, state) VALUES ('Uberlândia', 'MG');
 INSERT INTO TB_CITIES (name, state) VALUES ('Goiânia', 'GO');
 
 -- EMPRESAS DE ALUGUEL
-INSERT INTO TB_RENTAL_COMPANIES (name, city) VALUES ('AlugaCar SP', (SELECT id FROM TB_CITIES WHERE name = 'São Paulo'));
-INSERT INTO TB_RENTAL_COMPANIES (name, city) VALUES ('RentNow MG', (SELECT id FROM TB_CITIES WHERE name = 'Uberlândia'));
-INSERT INTO TB_RENTAL_COMPANIES (name, city) VALUES ('CarRent GO', (SELECT id FROM TB_CITIES WHERE name = 'Goiânia'));
+INSERT INTO TB_RENTAL_COMPANIES (name, city) VALUES ('AlugaCar SP', 1);
+INSERT INTO TB_RENTAL_COMPANIES (name, city) VALUES ('RentNow MG', 2);
+INSERT INTO TB_RENTAL_COMPANIES (name, city) VALUES ('CarRent GO', 3);
 
 -- CARROS
 INSERT INTO TB_CARS (brand, model, car_year, image_url, price_per_day, is_available, fk_category_id, fk_rental_company_id) VALUES ('Toyota', 'Corolla', 2020, 'url_imagem_corolla', 150, true, 1, 1);
@@ -21,6 +21,12 @@ INSERT INTO TB_CARS (brand, model, car_year, image_url, price_per_day, is_availa
 INSERT INTO TB_CARS (brand, model, car_year, image_url, price_per_day, is_available, fk_category_id, fk_rental_company_id) VALUES ('Renault', 'Sandero', 2018, 'url_imagem_sandero', 100, true, 3, 3);
 INSERT INTO TB_CARS (brand, model, car_year, image_url, price_per_day, is_available, fk_category_id, fk_rental_company_id) VALUES ('Volkswagen', 'Polo', 2020, 'url_imagem_polo', 140, true, 2, 1);
 
+-- CARACTERISTICA
+INSERT INTO TB_CHARACTERISTICS (seats, trunk, icon, car_doors, fk_car_id) VALUES ('4 lugares', 'Porta-malas espaçoso', 'icon_url', 4, 1);
+INSERT INTO TB_CHARACTERISTICS (seats, trunk, icon, car_doors, fk_car_id) VALUES ('4 lugares', 'Porta-malas espaçoso', 'icon_url', 4, 2);
+INSERT INTO TB_CHARACTERISTICS (seats, trunk, icon, car_doors, fk_car_id) VALUES ('4 lugares', 'Porta-malas espaçoso', 'icon_url', 4, 3);
+INSERT INTO TB_CHARACTERISTICS (seats, trunk, icon, car_doors, fk_car_id) VALUES ('4 lugares', 'Porta-malas espaçoso', 'icon_url', 4, 4);
+INSERT INTO TB_CHARACTERISTICS (seats, trunk, icon, car_doors, fk_car_id) VALUES ('4 lugares', 'Porta-malas espaçoso', 'icon_url', 4, 5);
 
 -- USUÁRIOS
 INSERT INTO TB_USERS (username, password, email, full_name) VALUES ('Carlos', '123', 'Carlos@example.com', 'Carlos');

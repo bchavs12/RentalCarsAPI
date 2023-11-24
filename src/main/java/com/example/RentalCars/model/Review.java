@@ -18,7 +18,7 @@ public class Review {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Integer rating; // rating scale 1 to 5
+    private Integer rating;
     private String comment;
 
     @ManyToOne
