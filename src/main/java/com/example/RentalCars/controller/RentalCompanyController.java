@@ -31,7 +31,14 @@ public class RentalCompanyController {
         }
 
     }
-
+    @GetMapping("/city/{city}")
+        public ResponseEntity<List <RentalCompany>> getRentalCompanyByCity(@PathVariable Long city){
+        List<RentalCompany> rentalCompanies = rentalCompanyService.getRentalCompaniesByCity(city);
+        if (rentalCompanies.isEmpty()){
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(rentalCompanies);
+    }
 
     @PostMapping
     public ResponseEntity<RentalCompanyResponseDTO> createCompany(@RequestBody RentalCompanyRequestDTO requestDTO) throws InvalidDataException{

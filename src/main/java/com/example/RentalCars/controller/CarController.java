@@ -40,6 +40,16 @@ public class CarController {
         return ResponseEntity.ok(cars);
     }
 
+    @GetMapping("/company/{rentalCompanyId}")
+        public ResponseEntity<List<Car>> getCarsByRentalCompanyId(@PathVariable Long rentalCompanyId){
+            List<Car> cars = carService.getCarsByRentalCompanyId(rentalCompanyId);
+            if (cars.isEmpty()) {
+                return ResponseEntity.notFound().build();
+            }
+            return ResponseEntity.ok(cars);
+    }
+
+
     @PostMapping
     public ResponseEntity<CarResponseDTO> saveCar(@RequestBody CarRequestDTO requestDTO) throws InvalidDataException {
         try{

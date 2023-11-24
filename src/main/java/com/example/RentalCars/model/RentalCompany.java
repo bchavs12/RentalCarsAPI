@@ -21,7 +21,7 @@ public class RentalCompany {
     @JoinColumn(name = "city")
     private City city;
 
-    @OneToMany(mappedBy = "rentalCompany", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<Car> availableCars;
+    //@OneToMany(mappedBy = "rentalCompany", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+   // private List<Car> availableCars;
 
 }

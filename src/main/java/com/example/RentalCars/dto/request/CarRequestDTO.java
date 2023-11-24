@@ -2,6 +2,7 @@ package com.example.RentalCars.dto.request;
 
 import com.example.RentalCars.model.Car;
 import com.example.RentalCars.model.Category;
+import com.example.RentalCars.model.RentalCompany;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
@@ -15,8 +16,9 @@ public class CarRequestDTO {
     private Integer pricePerDay;
     private Boolean isAvailable;
     private Long categoryId;
+    private Long rentalCompanyId;
 
-    public Car toCarEntity(Category category) {
+    public Car toCarEntity(Category category, RentalCompany rentalCompany) {
         Car car = new Car();
         car.setBrand(this.getBrand());
         car.setModel(this.getModel());
@@ -25,6 +27,7 @@ public class CarRequestDTO {
         car.setPricePerDay(this.getPricePerDay());
         car.setIsAvailable(this.getIsAvailable());
         car.setCategory(category);
+        car.setRentalCompany(rentalCompany);
         return car;
     }
 }

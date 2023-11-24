@@ -11,4 +11,7 @@ import java.util.List;
 @Repository
 public interface CarRepository extends JpaRepository<Car, Long> {
     @Query("SELECT obj FROM Car obj WHERE obj.category.id = :categoryId")
-    List<Car> findCarsByCategoryId(@Param("categoryId") Long categoryId);}
+    List<Car> findCarsByCategoryId(@Param("categoryId") Long categoryId);
+    @Query("SELECT obj FROM Car obj WHERE obj.rentalCompany.id = :rentalCompanyId")
+    List<Car> findCarsByRentalCompanyId(@Param("rentalCompanyId") Long rentalCompanyId);
+}

@@ -12,9 +12,10 @@ public class CarResponseDTO {
     private Integer pricePerDay;
     private Boolean isAvailable;
     private Long categoryId;
+    private Long rentalCompanyId;
 
     public CarResponseDTO(Long id, String brand, String model, int carYear, String imageUrl,
-                          int pricePerDay, boolean isAvailable, Long categoryId) {
+                          int pricePerDay, boolean isAvailable, Long categoryId, Long rentalCompanyId) {
         this.id = id;
         this.brand = brand;
         this.model = model;
@@ -23,5 +24,6 @@ public class CarResponseDTO {
         this.pricePerDay = pricePerDay;
         this.isAvailable = isAvailable;
         this.categoryId = categoryId;
+        this.rentalCompanyId = rentalCompanyId;
     }
 }
