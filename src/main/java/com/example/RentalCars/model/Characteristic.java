@@ -1,5 +1,6 @@
 package com.example.RentalCars.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import jakarta.transaction.Transactional;
@@ -24,5 +25,6 @@ public class Characteristic {
 
     @ManyToOne
     @JoinColumn(name = "fk_car_id")
+    @JsonIgnore
     private Car car;
 }

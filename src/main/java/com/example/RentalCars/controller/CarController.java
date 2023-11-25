@@ -23,12 +23,7 @@ public class CarController {
     @GetMapping
     public ResponseEntity<List<Car>> getAllCars() throws ResourceNotFoundException{
         List<Car> carList = carService.getAllCars();
-
-        if (!carList.isEmpty()){
-            return ResponseEntity.status(HttpStatus.OK).body(carList);
-        } else{
-            throw new ResourceNotFoundException("Erro! registro não encontrado!");
-        }
+        return ResponseEntity.status(HttpStatus.OK).body(carList);
     }
 
     @GetMapping("/category/{categoryId}")
