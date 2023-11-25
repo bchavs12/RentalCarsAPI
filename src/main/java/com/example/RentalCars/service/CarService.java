@@ -29,6 +29,11 @@ public class CarService {
         return carRepository.findAll();
     }
 
+    public Car getCarById(Long id) throws ResourceNotFoundException {
+        return carRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Carro não encontrado com id: " + id));
+    }
+
     public List<Car> getCarsByCategoryId(Long categoryId) {
         return carRepository.findCarsByCategoryId(categoryId);
     }

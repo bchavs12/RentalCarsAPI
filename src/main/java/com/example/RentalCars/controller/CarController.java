@@ -26,6 +26,12 @@ public class CarController {
         return ResponseEntity.status(HttpStatus.OK).body(carList);
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<Car> getCarById(@PathVariable Long id) throws ResourceNotFoundException {
+        Car car = carService.getCarById(id);
+        return ResponseEntity.ok(car);
+    }
+
     @GetMapping("/category/{categoryId}")
     public ResponseEntity<List<Car>> getCarsByCategory(@PathVariable Long categoryId) {
         List<Car> cars = carService.getCarsByCategoryId(categoryId);
