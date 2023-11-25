@@ -48,6 +48,6 @@ public class CarService {
         Car savedCar = carRepository.save(car);
         return new CarResponseDTO(savedCar.getId(), savedCar.getBrand(), savedCar.getModel(),
                 savedCar.getCarYear(), savedCar.getImageUrl(), savedCar.getPricePerDay(),
-                savedCar.getIsAvailable(), savedCar.getCategory().getId(), savedCar.getRentalCompany().getId());
+                savedCar.getIsAvailable(),savedCar.getDescription() ,savedCar.getCategory().getId(), savedCar.getRentalCompany().getId());
     }
 }

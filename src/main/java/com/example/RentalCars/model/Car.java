@@ -20,6 +20,8 @@ public class Car {
     private String imageUrl;
     private Integer pricePerDay;
     private Boolean isAvailable;
+    @Column(columnDefinition = "TEXT")
+    private String description;
 
     @ManyToOne
     @JoinColumn(name = "fk_category_id", nullable = false)

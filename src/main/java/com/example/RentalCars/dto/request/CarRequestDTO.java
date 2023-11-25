@@ -15,6 +15,7 @@ public class CarRequestDTO {
     private String imageUrl;
     private Integer pricePerDay;
     private Boolean isAvailable;
+    private String description;
     private Long categoryId;
     private Long rentalCompanyId;
 
@@ -26,6 +27,7 @@ public class CarRequestDTO {
         car.setImageUrl(this.getImageUrl());
         car.setPricePerDay(this.getPricePerDay());
         car.setIsAvailable(this.getIsAvailable());
+        car.setDescription(this.getDescription());
         car.setCategory(category);
         car.setRentalCompany(rentalCompany);
         return car;
