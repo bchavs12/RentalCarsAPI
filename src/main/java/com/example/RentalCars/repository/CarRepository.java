@@ -14,4 +14,7 @@ public interface CarRepository extends JpaRepository<Car, Long> {
     List<Car> findCarsByCategoryId(@Param("categoryId") Long categoryId);
     @Query("SELECT obj FROM Car obj WHERE obj.rentalCompany.id = :rentalCompanyId")
     List<Car> findCarsByRentalCompanyId(@Param("rentalCompanyId") Long rentalCompanyId);
+
+    @Query("SELECT c FROM Car c WHERE LOWER(c.rentalCompany.city.name) LIKE LOWER(CONCAT('%', :cityName, '%'))")
+    List<Car> findCarsByCityNameContaining(@Param("cityName") String cityName);
 }

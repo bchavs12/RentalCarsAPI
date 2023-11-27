@@ -41,6 +41,15 @@ public class CarController {
         return ResponseEntity.ok(cars);
     }
 
+    @GetMapping("/city")
+    public ResponseEntity<List<Car>> getCarsByCity(@RequestParam String city) {
+        List<Car> cars = carService.getCarsByCityName(city);
+        if (cars.isEmpty()) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(cars);
+    }
+
     @GetMapping("/company/{rentalCompanyId}")
         public ResponseEntity<List<Car>> getCarsByRentalCompanyId(@PathVariable Long rentalCompanyId){
             List<Car> cars = carService.getCarsByRentalCompanyId(rentalCompanyId);

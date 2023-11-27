@@ -34,6 +34,10 @@ public class CarService {
                 .orElseThrow(() -> new ResourceNotFoundException("Carro não encontrado com id: " + id));
     }
 
+    public List<Car> getCarsByCityName(String cityName) {
+        return carRepository.findCarsByCityNameContaining(cityName);
+    }
+
     public List<Car> getCarsByCategoryId(Long categoryId) {
         return carRepository.findCarsByCategoryId(categoryId);
     }
