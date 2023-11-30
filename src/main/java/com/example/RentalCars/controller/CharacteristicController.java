@@ -4,6 +4,7 @@ import com.example.RentalCars.model.Characteristic;
 import com.example.RentalCars.service.CharacteristicService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -21,11 +22,13 @@ public class CharacteristicController {
     }
 
     @PostMapping
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
     public ResponseEntity<Characteristic> createCharacteristic(@RequestBody Characteristic characteristic) {
         return ResponseEntity.ok(characteristicService.save(characteristic));
     }
 
     @DeleteMapping("/{id}")
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
     public ResponseEntity<Void> deleteCharacteristic(@PathVariable Long id) {
         characteristicService.delete(id);
         return ResponseEntity.ok().build();
