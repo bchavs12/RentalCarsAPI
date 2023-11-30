@@ -63,22 +63,24 @@ INSERT INTO TB_CHARACTERISTICS (seats, trunk, icon, car_doors, fk_car_id) VALUES
 INSERT INTO TB_CHARACTERISTICS (seats, trunk, icon, car_doors, fk_car_id) VALUES ('5 lugares', 'Porta-malas espaçoso', 'icon_url', 4, 9);
 
 -- USUÁRIOS
-INSERT INTO TB_USERS (username, password, email, full_name) VALUES ('Carlos', '123', 'Carlos@example.com', 'Carlos');
-INSERT INTO TB_USERS (username, password, email, full_name) VALUES ('Bruno', '123', 'Bruno@example.com', 'Bruno');
-INSERT INTO TB_USERS (username, password, email, full_name) VALUES ('Lucas', '123', 'Lucas@example.com', 'Lucas');
-INSERT INTO TB_USERS (username, password, email, full_name) VALUES ('João', '123', 'João@example.com', 'João');
-INSERT INTO TB_USERS (username, password, email, full_name) VALUES ('Maria', '123', 'Maria@example.com', 'Maria');
+INSERT INTO TB_USERS (username, password, email, full_name) VALUES ('customer', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG', 'customer@customer.com', 'customer');
+INSERT INTO TB_USERS (username, password, email, full_name) VALUES ('admin', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG', 'admin@admin.com', 'admin');
+
+-- ROLES
+INSERT INTO TB_ROLE (authority) VALUES ('ROLE_CLIENT');
+INSERT INTO TB_ROLE (authority) VALUES ('ROLE_ADMIN');
+
+-- USER ROLES
+INSERT INTO TB_USER_ROLE (user_id, role_id) VALUES (1, 1);
+INSERT INTO TB_USER_ROLE (user_id, role_id) VALUES (2, 1);
+INSERT INTO TB_USER_ROLE (user_id, role_id) VALUES (2, 2);
 
 -- AVALIAÇÕES
 INSERT INTO TB_REVIEWS (rating, comment, fk_car_id, fk_user_id) VALUES (5, 'Excelente carro e serviço.', 1, 1);
 INSERT INTO TB_REVIEWS (rating, comment, fk_car_id, fk_user_id) VALUES (4, 'Muito confortável e econômico.', 2, 2);
 INSERT INTO TB_REVIEWS (rating, comment, fk_car_id, fk_user_id) VALUES (3, 'Bom carro, mas com alguns problemas menores.', 3, 1);
-INSERT INTO TB_REVIEWS (rating, comment, fk_car_id, fk_user_id) VALUES (2, 'Carro razoável, mas esperava mais.', 5, 4);
-INSERT INTO TB_REVIEWS (rating, comment, fk_car_id, fk_user_id) VALUES (4, 'Bom desempenho e limpeza impecável.', 1, 5);
 
 -- RESERVAS
 INSERT INTO TB_BOOKINGS (fk_car_id, fk_user_id, booking_start, booking_date, return_date) VALUES (1, 1, '08:00:00', '2023-01-01', '2023-01-07');
 INSERT INTO TB_BOOKINGS (fk_car_id, fk_user_id, booking_start, booking_date, return_date) VALUES (2, 2, '09:00:00', '2023-02-15', '2023-02-20');
-INSERT INTO TB_BOOKINGS (fk_car_id, fk_user_id, booking_start, booking_date, return_date) VALUES (3, 3, '10:00:00', '2023-03-10', '2023-03-15');
-
 
