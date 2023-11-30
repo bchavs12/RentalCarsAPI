@@ -12,11 +12,11 @@ import java.util.List;
 public interface UserRepository extends JpaRepository<User, Long> {
 
 	@Query(nativeQuery = true, value = """
-				SELECT tb_user.email AS username, tb_user.password, tb_role.id AS roleId, tb_role.authority
-				FROM tb_user
-				INNER JOIN tb_user_role ON tb_user.id = tb_user_role.user_id
-				INNER JOIN tb_role ON tb_role.id = tb_user_role.role_id
-				WHERE tb_user.email = :email
+				SELECT TB_USERS.email AS username, TB_USERS.password, TB_ROLE.id AS roleId, TB_ROLE.authority
+				FROM TB_USERS
+				INNER JOIN TB_USER_ROLE ON TB_USERS.id = TB_USER_ROLE.user_id
+				INNER JOIN TB_ROLE ON TB_ROLE.id = TB_USER_ROLE.role_id
+				WHERE TB_USERS.email = :email
 			""")
 	List<UserDetailsProjection> searchUserAndRolesByEmail(String email);
 }
