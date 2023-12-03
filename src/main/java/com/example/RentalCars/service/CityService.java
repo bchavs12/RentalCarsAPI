@@ -4,7 +4,6 @@ import com.example.RentalCars.dto.request.CityRequestDTO;
 import com.example.RentalCars.dto.response.CityResponseDTO;
 import com.example.RentalCars.exception.InvalidDataException;
 import com.example.RentalCars.exception.ResourceNotFoundException;
-import com.example.RentalCars.model.Category;
 import com.example.RentalCars.model.City;
 import com.example.RentalCars.repository.CityRepository;
 import org.modelmapper.ModelMapper;

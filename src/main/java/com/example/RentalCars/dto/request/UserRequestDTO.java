@@ -11,5 +11,7 @@ import lombok.*;
 @Builder
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class UserRequestDTO {
-    private String userName;
+    private String fullName;
+    private String email;
+    private String password;
 }

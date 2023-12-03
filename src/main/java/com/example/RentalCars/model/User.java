@@ -5,6 +5,7 @@ import jakarta.transaction.Transactional;
 import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -13,7 +14,6 @@ import java.util.*;
 @Data
 @Transactional
 @NoArgsConstructor
-
 @Table(name = "TB_USERS")
 @Entity
 public class User implements UserDetails {
@@ -21,7 +21,7 @@ public class User implements UserDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String username;
+    private String fullName;
     @Getter
     private String password;
     private String email;

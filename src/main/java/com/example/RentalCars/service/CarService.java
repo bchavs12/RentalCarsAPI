@@ -2,7 +2,6 @@ package com.example.RentalCars.service;
 
 import com.example.RentalCars.dto.request.CarRequestDTO;
 import com.example.RentalCars.dto.response.CarResponseDTO;
-import com.example.RentalCars.exception.InvalidDataException;
 import com.example.RentalCars.exception.ResourceNotFoundException;
 import com.example.RentalCars.model.Car;
 import com.example.RentalCars.model.Category;
@@ -10,8 +9,6 @@ import com.example.RentalCars.model.RentalCompany;
 import com.example.RentalCars.repository.CarRepository;
 import com.example.RentalCars.repository.CategoryRepository;
 import com.example.RentalCars.repository.RentalCompanyRepository;
-import org.modelmapper.ModelMapper;
-import org.modelmapper.PropertyMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,9 +1,6 @@
 package com.example.RentalCars.dto.response;
 
-import com.example.RentalCars.model.City;
 import lombok.Data;
-
-import java.util.List;
 
 @Data
 public class RentalCompanyResponseDTO {
