@@ -1,11 +1,10 @@
 package com.example.RentalCars.dto.request;
 
 import com.example.RentalCars.model.City;
-import com.example.RentalCars.model.RentalCar;
 import com.example.RentalCars.model.RentalCompany;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
-import java.util.List;
+
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class RentalCompanyRequestDTO {

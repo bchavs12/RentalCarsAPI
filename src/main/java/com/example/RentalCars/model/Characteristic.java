@@ -20,7 +20,6 @@ public class Characteristic {
     private Long id;
     private String seats;
     private String trunk;
-    private String icon;
     private Integer carDoors;
 
     @ManyToOne

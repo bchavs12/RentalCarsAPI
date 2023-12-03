@@ -52,36 +52,39 @@ INSERT INTO TB_CARS (brand, model, car_year, image_url, price_per_day, is_availa
 
 
 -- CARACTERISTICA
-INSERT INTO TB_CHARACTERISTICS (seats, trunk, icon, car_doors, fk_car_id) VALUES ('4 lugares', 'Porta-malas espaçoso', 'icon_url', 4, 1);
-INSERT INTO TB_CHARACTERISTICS (seats, trunk, icon, car_doors, fk_car_id) VALUES ('4 lugares', 'Porta-malas espaçoso', 'icon_url', 4, 2);
-INSERT INTO TB_CHARACTERISTICS (seats, trunk, icon, car_doors, fk_car_id) VALUES ('4 lugares', 'Porta-malas espaçoso', 'icon_url', 4, 3);
-INSERT INTO TB_CHARACTERISTICS (seats, trunk, icon, car_doors, fk_car_id) VALUES ('4 lugares', 'Porta-malas espaçoso', 'icon_url', 4, 4);
-INSERT INTO TB_CHARACTERISTICS (seats, trunk, icon, car_doors, fk_car_id) VALUES ('4 lugares', 'Porta-malas espaçoso', 'icon_url', 4, 5);
-INSERT INTO TB_CHARACTERISTICS (seats, trunk, icon, car_doors, fk_car_id) VALUES ('4 lugares', 'Porta-malas espaçoso', 'icon_url', 4, 6);
-INSERT INTO TB_CHARACTERISTICS (seats, trunk, icon, car_doors, fk_car_id) VALUES ('4 lugares', 'Porta-malas espaçoso', 'icon_url', 4, 7);
-INSERT INTO TB_CHARACTERISTICS (seats, trunk, icon, car_doors, fk_car_id) VALUES ('5 lugares', 'Porta-malas espaçoso', 'icon_url', 4, 8);
-INSERT INTO TB_CHARACTERISTICS (seats, trunk, icon, car_doors, fk_car_id) VALUES ('5 lugares', 'Porta-malas espaçoso', 'icon_url', 4, 9);
-INSERT INTO TB_CHARACTERISTICS (seats, trunk, icon, car_doors, fk_car_id) VALUES ('5 lugares', 'Porta-malas espaçoso', 'icon_url', 4, 10);
-INSERT INTO TB_CHARACTERISTICS (seats, trunk, icon, car_doors, fk_car_id) VALUES ('5 lugares', 'Porta-malas espaçoso', 'icon_url', 4, 11);
-INSERT INTO TB_CHARACTERISTICS (seats, trunk, icon, car_doors, fk_car_id) VALUES ('5 lugares', 'Porta-malas espaçoso', 'icon_url', 4, 12);
-INSERT INTO TB_CHARACTERISTICS (seats, trunk, icon, car_doors, fk_car_id) VALUES ('5 lugares', 'Porta-malas compacto', 'icon_url', 4, 13);
-INSERT INTO TB_CHARACTERISTICS (seats, trunk, icon, car_doors, fk_car_id) VALUES ('5 lugares', 'Porta-malas eficiente', 'icon_url', 4, 14);
-INSERT INTO TB_CHARACTERISTICS (seats, trunk, icon, car_doors, fk_car_id) VALUES ('5 lugares', 'Porta-malas prático', 'icon_url', 4, 15);
-INSERT INTO TB_CHARACTERISTICS (seats, trunk, icon, car_doors, fk_car_id) VALUES ('5 lugares', 'Porta-malas ágil', 'icon_url', 4, 16);
-INSERT INTO TB_CHARACTERISTICS (seats, trunk, icon, car_doors, fk_car_id) VALUES ('5 lugares', 'Porta-malas versátil', 'icon_url', 4, 17);
-INSERT INTO TB_CHARACTERISTICS (seats, trunk, icon, car_doors, fk_car_id) VALUES ('5 lugares', 'Porta-malas dinâmico', 'icon_url', 4, 18);
-INSERT INTO TB_CHARACTERISTICS (seats, trunk, icon, car_doors, fk_car_id) VALUES ('5 lugares', 'Porta-malas inovador', 'icon_url', 4, 19);
-INSERT INTO TB_CHARACTERISTICS (seats, trunk, icon, car_doors, fk_car_id) VALUES ('5 lugares', 'Porta-malas autônomo', 'icon_url', 4, 20);
-INSERT INTO TB_CHARACTERISTICS (seats, trunk, icon, car_doors, fk_car_id) VALUES ('5 lugares', 'Porta-malas sustentável', 'icon_url', 4, 21);
-INSERT INTO TB_CHARACTERISTICS (seats, trunk, icon, car_doors, fk_car_id) VALUES ('5 lugares', 'Porta-malas revolucionário', 'icon_url', 4, 22);
-INSERT INTO TB_CHARACTERISTICS (seats, trunk, icon, car_doors, fk_car_id) VALUES ('5 lugares', 'Porta-malas futurista', 'icon_url', 4, 23);
+INSERT INTO TB_CHARACTERISTICS (seats, trunk, car_doors, fk_car_id) VALUES ('4 lugares', 'Porta-malas espaçoso', 4, 1);
+INSERT INTO TB_CHARACTERISTICS (seats, trunk, car_doors, fk_car_id) VALUES ('4 lugares', 'Porta-malas espaçoso', 4, 2);
+INSERT INTO TB_CHARACTERISTICS (seats, trunk, car_doors, fk_car_id) VALUES ('4 lugares', 'Porta-malas espaçoso', 4, 3);
+INSERT INTO TB_CHARACTERISTICS (seats, trunk, car_doors, fk_car_id) VALUES ('4 lugares', 'Porta-malas espaçoso', 4, 4);
+INSERT INTO TB_CHARACTERISTICS (seats, trunk, car_doors, fk_car_id) VALUES ('4 lugares', 'Porta-malas espaçoso', 4, 5);
+INSERT INTO TB_CHARACTERISTICS (seats, trunk, car_doors, fk_car_id) VALUES ('4 lugares', 'Porta-malas espaçoso', 4, 6);
+INSERT INTO TB_CHARACTERISTICS (seats, trunk, car_doors, fk_car_id) VALUES ('4 lugares', 'Porta-malas espaçoso', 4, 7);
+INSERT INTO TB_CHARACTERISTICS (seats, trunk, car_doors, fk_car_id) VALUES ('5 lugares', 'Porta-malas espaçoso', 4, 8);
+INSERT INTO TB_CHARACTERISTICS (seats, trunk, car_doors, fk_car_id) VALUES ('5 lugares', 'Porta-malas espaçoso', 4, 9);
+INSERT INTO TB_CHARACTERISTICS (seats, trunk, car_doors, fk_car_id) VALUES ('5 lugares', 'Porta-malas espaçoso', 4, 10);
+INSERT INTO TB_CHARACTERISTICS (seats, trunk, car_doors, fk_car_id) VALUES ('5 lugares', 'Porta-malas espaçoso', 4, 11);
+INSERT INTO TB_CHARACTERISTICS (seats, trunk, car_doors, fk_car_id) VALUES ('5 lugares', 'Porta-malas espaçoso', 4, 12);
+INSERT INTO TB_CHARACTERISTICS (seats, trunk, car_doors, fk_car_id) VALUES ('5 lugares', 'Porta-malas compacto', 4, 13);
+INSERT INTO TB_CHARACTERISTICS (seats, trunk, car_doors, fk_car_id) VALUES ('5 lugares', 'Porta-malas eficiente', 4, 14);
+INSERT INTO TB_CHARACTERISTICS (seats, trunk, car_doors, fk_car_id) VALUES ('5 lugares', 'Porta-malas prático', 4, 15);
+INSERT INTO TB_CHARACTERISTICS (seats, trunk, car_doors, fk_car_id) VALUES ('5 lugares', 'Porta-malas ágil', 4, 16);
+INSERT INTO TB_CHARACTERISTICS (seats, trunk, car_doors, fk_car_id) VALUES ('5 lugares', 'Porta-malas versátil', 4, 17);
+INSERT INTO TB_CHARACTERISTICS (seats, trunk, car_doors, fk_car_id) VALUES ('5 lugares', 'Porta-malas dinâmico', 4, 18);
+INSERT INTO TB_CHARACTERISTICS (seats, trunk, car_doors, fk_car_id) VALUES ('5 lugares', 'Porta-malas inovador', 4, 19);
+INSERT INTO TB_CHARACTERISTICS (seats, trunk, car_doors, fk_car_id) VALUES ('5 lugares', 'Porta-malas autônomo', 4, 20);
+INSERT INTO TB_CHARACTERISTICS (seats, trunk, car_doors, fk_car_id) VALUES ('5 lugares', 'Porta-malas sustentável', 4, 21);
+INSERT INTO TB_CHARACTERISTICS (seats, trunk, car_doors, fk_car_id) VALUES ('5 lugares', 'Porta-malas revolucionário', 4, 22);
+INSERT INTO TB_CHARACTERISTICS (seats, trunk, car_doors, fk_car_id) VALUES ('5 lugares', 'Porta-malas futurista', 4, 23);
 
 
 
 
 -- USUÁRIOS
-INSERT INTO TB_USERS (username, password, email, full_name) VALUES ('customer', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG', 'customer@customer.com', 'customer');
-INSERT INTO TB_USERS (username, password, email, full_name) VALUES ('admin', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG', 'admin@admin.com', 'admin');
+INSERT INTO TB_USERS (username, password, email) VALUES ('customer', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG', 'customer@customer.com');
+INSERT INTO TB_USERS (username, password, email) VALUES ('admin', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG', 'admin@admin.com');
+INSERT INTO TB_USERS (username, password, email) VALUES ('Elisabeth ||', 'rainhadaporratoda', 'Elisa@beth.com');
+INSERT INTO TB_USERS (username, password, email) VALUES ('Alan Turing', 'rodatupmoc0101', 'alan@turing.com');
+INSERT INTO TB_USERS (username, password, email) VALUES ('Steve Jobs', 'applsteave123', 'steve@apple.com');
 
 -- ROLES
 INSERT INTO TB_ROLE (authority) VALUES ('ROLE_CLIENT');
@@ -90,14 +93,22 @@ INSERT INTO TB_ROLE (authority) VALUES ('ROLE_ADMIN');
 -- USER ROLES
 INSERT INTO TB_USER_ROLE (user_id, role_id) VALUES (1, 1);
 INSERT INTO TB_USER_ROLE (user_id, role_id) VALUES (2, 1);
-INSERT INTO TB_USER_ROLE (user_id, role_id) VALUES (2, 2);
+INSERT INTO TB_USER_ROLE (user_id, role_id) VALUES (3, 2);
+INSERT INTO TB_USER_ROLE (user_id, role_id) VALUES (4, 1);
+INSERT INTO TB_USER_ROLE (user_id, role_id) VALUES (5, 2);
 
 -- AVALIAÇÕES
 INSERT INTO TB_REVIEWS (rating, comment, fk_car_id, fk_user_id) VALUES (5, 'Excelente carro e serviço.', 1, 1);
 INSERT INTO TB_REVIEWS (rating, comment, fk_car_id, fk_user_id) VALUES (4, 'Muito confortável e econômico.', 2, 2);
-INSERT INTO TB_REVIEWS (rating, comment, fk_car_id, fk_user_id) VALUES (3, 'Bom carro, mas com alguns problemas menores.', 3, 1);
+INSERT INTO TB_REVIEWS (rating, comment, fk_car_id, fk_user_id) VALUES (2, 'Bom pra quem e rico, muito caro.', 3, 3);
+INSERT INTO TB_REVIEWS (rating, comment, fk_car_id, fk_user_id) VALUES (4, 'Bom carro, mas com alguns problemas menores.', 4, 4);
+--INSERT INTO TB_REVIEWS (rating, comment, fk_car_id, fk_user_id) VALUES (5, 'Ótimo, foi bem prestativo', 5, 5);
+
 
 -- RESERVAS
 INSERT INTO TB_BOOKINGS (fk_car_id, fk_user_id, booking_start, booking_date, return_date) VALUES (1, 1, '08:00:00', '2023-01-01', '2023-01-07');
-INSERT INTO TB_BOOKINGS (fk_car_id, fk_user_id, booking_start, booking_date, return_date) VALUES (2, 2, '09:00:00', '2023-02-15', '2023-02-20');
+INSERT INTO TB_BOOKINGS (fk_car_id, fk_user_id, booking_start, booking_date, return_date) VALUES (2, 2, '09:00:00', '2023-02-15', '2023-03-15');
+INSERT INTO TB_BOOKINGS (fk_car_id, fk_user_id, booking_start, booking_date, return_date) VALUES (3, 3, '10:00:00', '2023-03-15', '2023-04-15');
+INSERT INTO TB_BOOKINGS (fk_car_id, fk_user_id, booking_start, booking_date, return_date) VALUES (4, 4, '11:00:00', '2023-05-15', '2023-06-15');
+--INSERT INTO TB_BOOKINGS (fk_car_id, fk_user_id, booking_start, booking_date, return_date) VALUES (5, 5, '12:00:00', '2023-06-15', '2023-07-15');
 

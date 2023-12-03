@@ -25,10 +25,9 @@ public class User implements UserDetails {
     @Getter
     private String password;
     private String email;
-    private String fullName;
 
     @OneToOne(mappedBy = "user")
-    private RentalCar currentRentalCar;
+    private Booking currentBooking;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Review> reviewList;

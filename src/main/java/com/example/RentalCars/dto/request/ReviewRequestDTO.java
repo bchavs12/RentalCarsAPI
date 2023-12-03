@@ -6,6 +6,8 @@ import lombok.Data;
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ReviewRequestDTO {
-    private String comment;
     private Integer rating;
+    private String comment;
+    private Long carId;
+    private Long userId;
 }

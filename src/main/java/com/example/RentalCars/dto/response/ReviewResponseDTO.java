@@ -5,6 +5,8 @@ import lombok.Data;
 @Data
 public class ReviewResponseDTO {
     private Long id;
-    private String comment;
     private Integer rating;
+    private String comment;
+    private Long carId;
+    private Long userId;
 }
