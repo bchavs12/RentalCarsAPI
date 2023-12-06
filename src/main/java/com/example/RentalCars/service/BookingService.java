@@ -17,9 +17,9 @@ import java.util.stream.Collectors;
 
 @Service
 public class BookingService {
-    private final BookingRepository bookingRepository;
-    private final CarRepository carRepository;
-    private final UserRepository userRepository;
+    private BookingRepository bookingRepository;
+    private CarRepository carRepository;
+    private UserRepository userRepository;
 
     @Autowired
     public BookingService(BookingRepository bookingRepository, CarRepository carRepository, UserRepository userRepository) {
@@ -29,18 +29,27 @@ public class BookingService {
     }
 
     public BookingResponseDTO createBooking(BookingRequestDTO requestDTO) throws InvalidDataException {
+        User user = userRepository.findById(requestDTO.getUserId())
+                .orElseThrow(() -> new InvalidDataException("User not found with id: " + requestDTO.getUserId()));
+
+        if (user.getCurrentBooking() != null) {
+            throw new InvalidDataException("User already has an active booking.");
+        }
+
         Booking booking = new Booking();
         booking.setBookingStart(requestDTO.getBookingStart());
         booking.setBookingDate(requestDTO.getBookingDate());
         booking.setReturnDate(requestDTO.getReturnDate());
 
-        Car car = carRepository.findById(requestDTO.getCarId()).orElseThrow( () -> new InvalidDataException("Car not found with id: " + requestDTO.getCarId()));
+        Car car = carRepository.findById(requestDTO.getCarId())
+                .orElseThrow(() -> new InvalidDataException("Car not found with id: " + requestDTO.getCarId()));
         booking.setCar(car);
 
-        User user = userRepository.findById(requestDTO.getUserId()).orElseThrow( () -> new InvalidDataException("User not found with id: " + requestDTO.getUserId()));
         booking.setUser(user);
 
         Booking savedBooking = bookingRepository.save(booking);
+        user.setCurrentBooking(savedBooking);
+        userRepository.save(user);
 
         return convertToDTO(savedBooking);
     }
