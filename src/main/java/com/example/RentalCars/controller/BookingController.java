@@ -20,7 +20,7 @@ public class BookingController {
         this.bookingService = bookingService;
     }
 
-    @GetMapping("/all")
+    @GetMapping()
     @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_CLIENT')")
     public ResponseEntity<List<BookingResponseDTO>> getAllBookings() throws ResourceNotFoundException {
         try{
@@ -31,7 +31,7 @@ public class BookingController {
         }
     }
 
-    @PostMapping("/create")
+    @PostMapping()
     @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_CLIENT')")
     public ResponseEntity<BookingResponseDTO> createBooking(@RequestBody BookingRequestDTO requestDTO) throws InvalidDataException{
         try{
