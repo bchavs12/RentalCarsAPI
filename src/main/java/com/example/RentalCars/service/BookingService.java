@@ -59,6 +59,10 @@ public class BookingService {
         return bookings.stream().map(this::convertToDTO).collect(Collectors.toList());
     }
 
+    public void deleteBooking(Long id) {
+        bookingRepository.deleteById(id);
+    }
+
     public List<BookingResponseDTO> getAllBookings() {
         List<Booking> bookings = bookingRepository.findAll();
         return bookings.stream().map(this::convertToDTO).collect(Collectors.toList());
