@@ -54,6 +54,11 @@ public class BookingService {
         return convertToDTO(savedBooking);
     }
 
+    public List<BookingResponseDTO> getBookingsByUserId(Long userId) {
+        List<Booking> bookings = bookingRepository.findByUserId(userId);
+        return bookings.stream().map(this::convertToDTO).collect(Collectors.toList());
+    }
+
     public List<BookingResponseDTO> getAllBookings() {
         List<Booking> bookings = bookingRepository.findAll();
         return bookings.stream().map(this::convertToDTO).collect(Collectors.toList());

@@ -42,4 +42,15 @@ public class BookingController {
         }
     }
 
+    @GetMapping("/user/{userId}")
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_CLIENT')")
+    public ResponseEntity<List<BookingResponseDTO>> getBookingsByUserId(@PathVariable Long userId) throws ResourceNotFoundException {
+        try {
+            List<BookingResponseDTO> userBookings = bookingService.getBookingsByUserId(userId);
+            return new ResponseEntity<>(userBookings, HttpStatus.OK);
+        } catch (Exception ex) {
+            throw new ResourceNotFoundException("Bookings for the user id " + userId + " not found " + ex);
+        }
+    }
+
 }

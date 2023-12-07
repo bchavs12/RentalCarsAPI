@@ -82,6 +82,7 @@ INSERT INTO TB_CHARACTERISTICS (seats, trunk, car_doors, fk_car_id) VALUES ('5 l
 -- USUÁRIOS
 INSERT INTO TB_USERS (full_name, password, email) VALUES ('customer', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG', 'customer@customer.com');
 INSERT INTO TB_USERS (full_name, password, email) VALUES ('admin', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG', 'admin@admin.com');
+INSERT INTO TB_USERS (full_name, password, email) VALUES ('test', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG', 'test@test.com');
 
 -- ROLES
 INSERT INTO TB_ROLE (authority) VALUES ('ROLE_CLIENT');
@@ -90,6 +91,8 @@ INSERT INTO TB_ROLE (authority) VALUES ('ROLE_ADMIN');
 -- USER ROLES
 INSERT INTO TB_USER_ROLE (user_id, role_id) VALUES (1, 1);
 INSERT INTO TB_USER_ROLE (user_id, role_id) VALUES (2, 2);
+INSERT INTO TB_USER_ROLE (user_id, role_id) VALUES (3, 1);
+INSERT INTO TB_USER_ROLE (user_id, role_id) VALUES (3, 2);
 
 -- AVALIAÇÕES
 INSERT INTO TB_REVIEWS (rating, comment, fk_car_id, fk_user_id) VALUES (5, 'Excelente carro e serviço.', 1, 1);
