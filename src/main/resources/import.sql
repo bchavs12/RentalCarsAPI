@@ -75,8 +75,9 @@ INSERT INTO TB_CHARACTERISTICS (seats, trunk, car_doors, fk_car_id) VALUES ('5 l
 INSERT INTO TB_CHARACTERISTICS (seats, trunk, car_doors, fk_car_id) VALUES ('5 lugares', 'Porta-malas sustentável', 4, 21);
 INSERT INTO TB_CHARACTERISTICS (seats, trunk, car_doors, fk_car_id) VALUES ('5 lugares', 'Porta-malas revolucionário', 4, 22);
 INSERT INTO TB_CHARACTERISTICS (seats, trunk, car_doors, fk_car_id) VALUES ('5 lugares', 'Porta-malas futurista', 4, 23);
-
-
+INSERT INTO TB_CHARACTERISTICS (seats, trunk, car_doors, fk_car_id) VALUES ('5 lugares', 'Porta-malas inteligente', 4, 24);
+INSERT INTO TB_CHARACTERISTICS (seats, trunk, car_doors, fk_car_id) VALUES ('5 lugares', 'Porta-malas smart', 4, 25);
+INSERT INTO TB_CHARACTERISTICS (seats, trunk, car_doors, fk_car_id) VALUES ('5 lugares', 'Porta-malas amplo', 4, 26);
 
 
 -- USUÁRIOS
