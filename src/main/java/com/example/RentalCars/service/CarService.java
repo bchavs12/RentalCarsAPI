@@ -56,4 +56,34 @@ public class CarService {
                 savedCar.getCarYear(), savedCar.getImageUrl(), savedCar.getPricePerDay(),
                 savedCar.getIsAvailable(),savedCar.getDescription() ,savedCar.getCategory().getId(), savedCar.getRentalCompany().getId());
     }
+
+    public CarResponseDTO updateCar(Long id, CarRequestDTO requestDTO) throws ResourceNotFoundException {
+        Car carToUpdate = carRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Carro não encontrado com id: " + id));
+
+        Category category = categoryRepository.findById(requestDTO.getCategoryId())
+                .orElseThrow(() -> new ResourceNotFoundException("Categoria não encontrada com id: " + requestDTO.getCategoryId()));
+        RentalCompany rentalCompany = rentalCompanyRepository.findById(requestDTO.getRentalCompanyId())
+                .orElseThrow(() -> new ResourceNotFoundException("Locadora não encontrada com id: " + requestDTO.getRentalCompanyId()));
+
+        carToUpdate.setBrand(requestDTO.getBrand());
+        carToUpdate.setModel(requestDTO.getModel());
+        carToUpdate.setCarYear(requestDTO.getCarYear());
+        carToUpdate.setImageUrl(requestDTO.getImageUrl());
+        carToUpdate.setPricePerDay(requestDTO.getPricePerDay());
+        carToUpdate.setIsAvailable(requestDTO.getIsAvailable());
+        carToUpdate.setDescription(requestDTO.getDescription());
+        carToUpdate.setCategory(category);
+        carToUpdate.setRentalCompany(rentalCompany);
+
+        Car updatedCar = carRepository.save(carToUpdate);
+
+        return new CarResponseDTO(updatedCar);
+    }
+
+    public void deleteCar(Long id) throws ResourceNotFoundException {
+        Car car = carRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Car not found with id: " + id));
+        carRepository.delete(car);
+    }
 }

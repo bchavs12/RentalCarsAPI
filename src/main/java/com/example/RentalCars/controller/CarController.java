@@ -72,4 +72,19 @@ public class CarController {
         }
     }
 
+    @PutMapping("/{id}")
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
+    public ResponseEntity<CarResponseDTO> updateCar(@PathVariable Long id, @RequestBody CarRequestDTO requestDTO) throws ResourceNotFoundException {
+        CarResponseDTO updatedCar = carService.updateCar(id, requestDTO);
+        return ResponseEntity.ok(updatedCar);
+    }
+
+    @DeleteMapping("/{id}")
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
+    public ResponseEntity<Void> deleteCar(@PathVariable Long id) throws ResourceNotFoundException {
+        carService.deleteCar(id);
+        return ResponseEntity.noContent().build();
+    }
+
+
 }

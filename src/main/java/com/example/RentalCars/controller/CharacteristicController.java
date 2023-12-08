@@ -27,6 +27,16 @@ public class CharacteristicController {
         return ResponseEntity.ok(characteristicService.save(characteristic));
     }
 
+    @PostMapping("/link/{characteristicId}/car/{carId}")
+    @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
+    public ResponseEntity<Characteristic> linkCharacteristicToCar(
+            @PathVariable Long characteristicId,
+            @PathVariable Long carId
+    ) {
+        Characteristic characteristic = characteristicService.linkCharacteristicToCar(characteristicId, carId);
+        return ResponseEntity.ok(characteristic);
+    }
+
     @DeleteMapping("/{id}")
     @PreAuthorize("hasAnyRole('ROLE_ADMIN')")
     public ResponseEntity<Void> deleteCharacteristic(@PathVariable Long id) {

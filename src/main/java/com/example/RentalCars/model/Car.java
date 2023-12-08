@@ -1,5 +1,6 @@
 package com.example.RentalCars.model;
 
+import com.example.RentalCars.dto.request.CarRequestDTO;
 import jakarta.persistence.*;
 import lombok.Data;
 import java.util.List;

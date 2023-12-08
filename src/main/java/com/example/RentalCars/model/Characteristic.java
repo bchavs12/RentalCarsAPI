@@ -8,7 +8,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@Transactional
 @NoArgsConstructor
 
 @Table(name = "TB_CHARACTERISTICS")
