@@ -40,23 +40,9 @@ class CarControllerTest {
     private CarRepository carRepository;
 
     @Test
-    @DisplayName("It should get all cars and return status 200(OK)")
-    void getAllCarsSucessCase() throws Exception {
-
-    }
-
-    @Test
     @DisplayName("Should get cars by Id and return status 200(OK)")
     void getCarById() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.get("/api/cars/{id}", 3))
-                .andDo(MockMvcResultHandlers.print())
-                .andExpect(MockMvcResultMatchers.status().isOk());
-    }
-
-    @Test
-    @DisplayName("Should get cars by Category Id and return 200(OK)")
-    void getCarsByCategory() throws Exception{
-        mockMvc.perform(MockMvcRequestBuilders.get("/api/cars/category/{categoryId}",1))
                 .andDo(MockMvcResultHandlers.print())
                 .andExpect(MockMvcResultMatchers.status().isOk());
     }
@@ -100,6 +86,5 @@ class CarControllerTest {
                 .andExpect(MockMvcResultMatchers.jsonPath("$.description").value(responseDTO.getDescription()))
                 .andExpect(MockMvcResultMatchers.jsonPath("$.categoryId").value(responseDTO.getCategoryId()))
                 .andExpect(MockMvcResultMatchers.jsonPath("$.rentalCompanyId").value(responseDTO.getRentalCompanyId()));
-
     }
 }

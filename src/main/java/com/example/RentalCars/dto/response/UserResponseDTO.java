@@ -1,5 +1,6 @@
 package com.example.RentalCars.dto.response;
 
+import com.example.RentalCars.dto.request.UserRequestDTO;
 import com.example.RentalCars.model.User;
 import lombok.Getter;
 import lombok.Setter;
@@ -26,6 +27,9 @@ public class UserResponseDTO {
         for(GrantedAuthority role : entity.getRoles()) {
             roles.add(role.getAuthority());
         }
+    }
+
+    public UserResponseDTO(UserRequestDTO requestDTO) {
     }
 
     public void setRoles(List<String> roles) {
